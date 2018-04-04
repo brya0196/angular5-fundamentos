@@ -4,9 +4,9 @@ import { Component } from '@angular/core';
     selector: 'videojuegos',
     template: `
         <h2>Componente de {{ nombre }}</h2>
-        <h3 *ng-if="mostrarRetro != true">El mejor juego es: {{ mejorJuego }}</h3>
+        <h3 *ngIf="mostrarRetro != true">El mejor juego es: {{ mejorJuego }}</h3>
         <h3 [style.background]="yellow"  
-            *ng-if="mostrarRetro">
+            *ngIf="mostrarRetro">
             El mejor juego retro es: {{ mejorJuegoRetro }}
         </h3>
     `
