@@ -2,33 +2,33 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'videojuegos',
-    template: `
-        <h2>Componente de {{ nombre }}</h2>
-        <h3 *ngIf="mostrarRetro != true">El mejor juego es: {{ mejorJuego }}</h3>
-        <h3 [style.background]="color"  
-            *ngIf="mostrarRetro">
-            El mejor juego retro es: {{ mejorJuegoRetro }}
-        </h3>
-
-        <h2>Listado de videojuegos</h2>
-        <ul>
-            <li *ngFor=" let game of videojuegos"> {{ game }} </li>
-        </ul>
-    `
+    templateUrl: './videojuegos.components.html'
 })
 
 export class VideojuegosComponent {
-    public nombre = 'Videojuegos 2018'
-    public mejorJuego = 'GTA 5';
-    public mejorJuegoRetro = "Super Mario 64";
-    public mostrarRetro = true;
-    public color = "yellow";
+    public nombre:string;
+    public mejorJuego:string;
+    public mejorJuegoRetro:string;
+    public mostrarRetro:boolean;
+    public color:string;
+    public year:number;
 
-    public videojuegos = [
-        "los simpons hit and rund",
-        "Assassins Creed",
-        "GTA",
-        "Call of Duty",
-        "Tekken"
-    ]
+
+    public videojuegos:Array<string>; // si ponemos any acepta todos los tipos de datos
+
+    constructor() {
+        this.nombre = 'Videojuegos 2018';
+        this.mejorJuego = 'GTA 5';
+        this.mejorJuegoRetro = "Super Mario 64";
+        this.mostrarRetro = true;
+        this.color = "yellow";
+        this.year = 2018; 
+        this.videojuegos = [
+            "los simpons hit and rund",
+            "Assassins Creed",
+            "GTA",
+            "Call of Duty",
+            "Tekken"
+        ]
+    }
 }
