@@ -10,7 +10,10 @@ import { Component } from '@angular/core';
             El mejor juego retro es: {{ mejorJuegoRetro }}
         </h3>
 
-        
+        <h2>Listado de videojuegos</h2>
+        <ul>
+            <li *ngFor=" let game of videojuegos"> {{ game }} </li>
+        </ul>
     `
 })
 
