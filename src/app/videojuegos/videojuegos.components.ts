@@ -5,10 +5,12 @@ import { Component } from '@angular/core';
     template: `
         <h2>Componente de {{ nombre }}</h2>
         <h3 *ngIf="mostrarRetro != true">El mejor juego es: {{ mejorJuego }}</h3>
-        <h3 [style.background]="yellow"  
+        <h3 [style.background]="color"  
             *ngIf="mostrarRetro">
             El mejor juego retro es: {{ mejorJuegoRetro }}
         </h3>
+
+        
     `
 })
 
@@ -17,4 +19,13 @@ export class VideojuegosComponent {
     public mejorJuego = 'GTA 5';
     public mejorJuegoRetro = "Super Mario 64";
     public mostrarRetro = true;
+    public color = "yellow";
+
+    public videojuegos = [
+        "los simpons hit and rund",
+        "Assassins Creed",
+        "GTA",
+        "Call of Duty",
+        "Tekken"
+    ]
 }
